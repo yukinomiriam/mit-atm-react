@@ -1,10 +1,12 @@
 {
-  "name": "assignments",
+  "homepage": "https://yukinomiriam.github.io/mit-atm-react/"
+  "name": "mit-atm-react",
   "version": "1.0.0",
-  "description": "week7 assignments unit test",
+  "description": "ATM React",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
   },
   "jest": {
     "testMatch": [
@@ -12,12 +14,13 @@
     ]
   },
   "keywords": [],
-  "author": "issam",
-  "license": "ISC",
+  "author": "Miriam Bade",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.4",
     "@babel/preset-env": "^7.15.4",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+	"gh-pages": "^3.2.3"
   },
   "dependencies": {
     "bootstrap-icons": "^1.5.0"
