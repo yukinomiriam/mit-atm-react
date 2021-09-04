@@ -23,6 +23,7 @@ For my UI changes I did the following:
 •	Changed the wording for some labels.
 •	Added some jQuery to add/display a custom greeting.
 •	Added Bootstrap and custom CSS.
+•	Added currency formatter to account balance.
 
 For the back-end changes:
 •	Added logic that will display either Cash Deposit or Cash Back fields depending on the option selected from a dropdown.
