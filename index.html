@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="/bootstrap/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+      crossorigin
+    ></script>
+
+    <title>Onclick Anything</title>
+  </head>
+
+  <body>
+    
+
+    <!-- You will put your React component inside this div. -->
+    <div class="container contact-form">
+      <div class="form-group">
+        <h2><span id="timeGreeting"></span>&nbsp;<span><i class="fas fa-user"></i></span></h2> 
+      </div>
+      <div id="root"></div>
+    </div>  
+    
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Load our React component. -->
+    <script type="text/jsx" src="./atm-improvements.jsx"></script>
+    
+    <script>
+      // This is loaded with jquery
+      $( document ).ready(function() {
+        getTime();
+      });
+
+      // This function gets current day and time and siplays a greeting message based on the time of the day
+      function getTime(){
+          let now = new Date();
+          let hrs = now.getHours();
+          let msg = "";
+          if (hrs >  6) msg = "Good Morning";      // After 6am
+          if (hrs > 12) msg = "Good Afternoon";    // After 12pm
+          if (hrs > 17) msg = "Good Evening";      // After 5pm
+          $('#timeGreeting').text(msg);
+      }
+
+    </script>
+  </body>
+  
+</html>
